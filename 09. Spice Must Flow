@@ -1,0 +1,37 @@
+using System;
+
+namespace Spice_Must_Flow
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int startingYield = int.Parse(Console.ReadLine());
+
+			int totalSpice = 0;
+			int operationDay = 0;
+
+			for (int i = startingYield; i >= 100; i -= 10)
+			{
+				int yield = i;
+
+				yield -= 26;
+
+				totalSpice += yield;
+
+				operationDay++;
+			}
+
+			Console.WriteLine(operationDay);
+			if (totalSpice > 26)
+			{
+				Console.WriteLine(totalSpice - 26);
+			}
+			else
+			{
+				Console.WriteLine(0);
+			}
+			
+		}
+	}
+}
