@@ -1,0 +1,22 @@
+using System;
+
+namespace Elevator
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int elevatePersons = int.Parse(Console.ReadLine());
+			int capacityElevate = int.Parse(Console.ReadLine());
+
+			int course = 0;
+
+			for (int i = capacityElevate; i < elevatePersons + capacityElevate; i += capacityElevate)
+			{
+				course++;
+			}
+
+			Console.WriteLine(course);
+		}
+	}
+}
